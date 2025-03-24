@@ -22,7 +22,7 @@ public class TestListener extends BaseClass implements ITestListener {
     public void onTestFailure(ITestResult result) {
         System.out.println("Test Failed: " + result.getName());
         
-        // Capture screenshot on failure
+        //Capture screenshot on failure
      
         String screenshotPath = wUtil.getScreenshot(driver, result.getName());
         System.out.println("Screenshot saved at: " + screenshotPath);
