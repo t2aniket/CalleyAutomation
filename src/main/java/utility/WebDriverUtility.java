@@ -254,7 +254,32 @@ public class WebDriverUtility {
     	}
     }
     
-    public void getScreenshot(WebDriver driver, String fileName) {
+    
+    /**
+     * This method will return true or false if the element can be clicked 
+     * Will throw exception after waiting for 20 secs
+     * @param driver
+     * @param element
+     * @return
+     */
+    public boolean isElementClickable(WebDriver driver,WebElement element)
+    {
+    	try {
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    	wait.until(ExpectedConditions.elementToBeClickable(element));
+    	return true;
+    	}
+    	
+    	catch(Exception e)
+    	{
+    		e.printStackTrace();
+    		Reporter.log("Element not Clickable within timeout: " + element.toString());
+    	   
+    	return false;
+    	}
+    }
+    
+    public String getScreenshot(WebDriver driver, String fileName) {
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String screenshotPath = "screenshots/" + fileName + "_" + timestamp + ".png";
@@ -265,6 +290,7 @@ public class WebDriverUtility {
         } catch (IOException e) {  // Specific exception type
             e.printStackTrace();
         }
+        return screenshotPath;
     }
     
     

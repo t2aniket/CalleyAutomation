@@ -34,7 +34,7 @@ public class FullSetupTest extends BaseClass {
         String username = pUtil.readPropertyFile("name");
 
         //login
-        Reporter.log("Trying to login with useremail and password");
+        Reporter.log("Trying to login with useremail and password",true);
         LP.getUserEmailField().sendKeys(useremail);
         LP.getUserPasswordField().sendKeys(password);
         LP.getLoginBtn().click();
@@ -52,18 +52,19 @@ public class FullSetupTest extends BaseClass {
         catch(Exception e){
         	
         	wUtil.getScreenshot(driver, "UserLogin_Failed");
+        	Reporter.log("USer Login Failed");
         }
-        Reporter.log("User Logged In Sucess");
+        Reporter.log("User Logged In Sucess",true);
         wUtil.moveToElement(driver, HP.getTeamBtn());
         HP.getAgentBtn().click();
-    	Reporter.log("On to the Agents Page");
+    	Reporter.log("On to the Agents Page",true);
     }
 
     @Test(priority = 2, dataProvider = "agentData", dataProviderClass = AgentDataProvider.class)
     public void createAgent(String agentName, String agentEmail, String agentMobile, String agentPassword) {
     	AgentPage AP = new AgentPage(driver);
         
-    	Reporter.log("Adding Agent Details");
+    	Reporter.log("Adding Agent Details",true);
     	
         // Enter agent details
         AP.getAgentNameField().sendKeys(agentName);
@@ -87,11 +88,13 @@ public class FullSetupTest extends BaseClass {
         //verifying if agent is added or not
         try {
         Assert.assertTrue(AP.isAgentAdded(agentName, agentEmail), "Agent Verification Failed");
+        
         }
         catch(Exception e)
         {
         	wUtil.getScreenshot(driver, "AgentCreation_Failed_");
-        }Reporter.log("Agent Details added sucessfully");
+        	Reporter.log("Agent Verification Failed",true);
+        }Reporter.log("Agent Details added sucessfully",true);
     }
 
     @Test(priority = 3,dependsOnMethods = "createAgent")
@@ -103,7 +106,7 @@ public class FullSetupTest extends BaseClass {
         wUtil.moveToElement(driver, BP.getCallListBtn());
         BP.getAddPowerImportBtn().click();
 
-        Reporter.log("Inside the bulk Upload Page");
+        Reporter.log("Inside the bulk Upload Page",true);
 
         
         BUP.getListName().sendKeys(pUtil.readPropertyFile("listname"));
@@ -115,22 +118,27 @@ public class FullSetupTest extends BaseClass {
         BUP.getListName().click();
         
         BUP.getFileUpload().sendKeys(ConstantUtility.AGENT_CSV_FILE);
-        
+        Reporter.log("CSV File uploaded",true);
         BUP.getUploadbtn().click();
+        	
         
-        wUtil.waitForElementToBeVisible(driver, BUP.getConfirmBtn());
+       if( wUtil.isElementClickable(driver, BUP.getConfirmBtn()))
+       {
+    	   
+    	   try {
+			Thread.sleep(1000);
+			wUtil.javaScriptExecutorClick(driver, BUP.getConfirmBtn());
+    	   		} 
+    	   catch (InterruptedException e) {
+			
+			 Reporter.log(e.getMessage(),true);
+    	   									}
+    	      
+       }    
         
-        try {
-			Thread.sleep(Duration.ofSeconds(1));
-		} catch (InterruptedException e) {
-		
-			e.printStackTrace();
-		}
-        BUP.getConfirmBtn().click();
-        
-       Reporter.log("Confirm Button Clicked");
+       Reporter.log("Confirm Button Clicked",true);
        
-       Reporter.log("Mapping the data");
+       Reporter.log("Mapping the data",true);
         String coloum1 = pUtil.readPropertyFile("coloum1");
         String coloum2 = pUtil.readPropertyFile("coloum2");
         String coloum3 = pUtil.readPropertyFile("coloum3");
@@ -141,14 +149,19 @@ public class FullSetupTest extends BaseClass {
         wUtil.selectByVisibleText(BUP.getColoum2DropDown(), coloum2);
         BUP.getColoum3DropDown().click();
         wUtil.selectByVisibleText(BUP.getColoum3DropDown(), coloum3);
-        Reporter.log("Data Sucessfully Mapped");
+        Reporter.log("Data Sucessfully Mapped",true);
         
         wUtil.javaScriptExecutorClick(driver, BUP.getImportDataBtn());
-        Reporter.log("File Sucessfully Imported");
+        Reporter.log("File Sucessfully Imported",true);
         
         BUP.getConfirmBtn().click();
-        
-        Reporter.log("Test Case Passed");
+       
+        try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			Reporter.log(e.getMessage(),true);
+		}
+        Reporter.log("Test Passed",true);
         
         
 }}

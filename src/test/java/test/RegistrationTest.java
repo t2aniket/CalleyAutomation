@@ -24,7 +24,7 @@ public class RegistrationTest extends BaseClass {
 	@Test
 	public void userRegistration() {
 		
-		Reporter.log("On Registeration Page");
+		Reporter.log("On Registeration Page",true);
 		RegistrationPage RP = new RegistrationPage(driver);//RegistrationPage is loaded as RP
 		
 		String Name=pUtil.readPropertyFile("name");
@@ -36,45 +36,45 @@ public class RegistrationTest extends BaseClass {
 		RP.getNameField().sendKeys(Name);
 		RP.getEmailField().sendKeys(Email);
 		RP.getPasswordField().sendKeys(Password);
-		Reporter.log("Entered Name,Email & Password");
+		Reporter.log("Entered Name,Email & Password",true);
 		
 		
 		Reporter.log("Swiching to iFrame for google CAPTCHA");
 		wUtil.switchToiFrame(driver, RP.getiFrameCAPTCHAField());
-		Reporter.log("Switched to IFrame");
+		Reporter.log("Switched to IFrame",true);
 		
 		
 		RP.getReCAPTCHAField().click();
-		Reporter.log("Please solve the captcha manually since it is not disabled");
-		Reporter.log("Waiting for Captcha to be solved");
+		Reporter.log("Please solve the captcha manually since it is not disabled",true);
+		Reporter.log("Waiting for Captcha to be solved",true);
 		
 		
 		wUtil.waitForAttributeValue(driver,RP.getReCAPTCHAField(), RP.getRECAPTCHA_CHECKED_ATTRIBUTE(),"true", 20);//this method check if the captcha is solved
-		Reporter.log("Captcha solved switching back to main frame");
+		Reporter.log("Captcha solved switching back to main frame",true);
 		wUtil.swtichToDefaultContent(driver);
 		
 		
 		RP.getMobileNumberField().sendKeys(MobileNumber);
-		Reporter.log("Entered MobileNumber");
+		Reporter.log("Entered MobileNumber",true);
 		
 		
 		wUtil.javaScriptExecutorClick(driver, RP.getCheckBoxField());
-		Reporter.log("Terms and Condition checkbox checked");
+		Reporter.log("Terms and Condition checkbox checked",true);
 		
 		
 		wUtil.javaScriptExecutorClick(driver, RP.getSignupbtn());
-		Reporter.log("Clicked Signup Button");
+		Reporter.log("Clicked Signup Button",true);
 		
 		
 		wUtil.waitForElementToBeVisible(driver, RP.getOtpSentOkBtn());
 		RP.getOtpSentOkBtn().click();
-		Reporter.log("OTP sent to mobile number enter it on eclipse since otp is dynamic and not turned off for testing purpose");
+		Reporter.log("OTP sent to mobile number enter it on eclipse since otp is dynamic and not turned off for testing purpose",true);
 		
 		
 		Scanner sc = new Scanner(System.in);
 		Reporter.log("Please Enter OTP", true);
 		String OTP = sc.next();  //since otp cannot be automated at this movement asking manual from user
-		Reporter.log("Entering the given OTP");
+		Reporter.log("Entering the given OTP",true);
 		sc.close();
 
 	
@@ -87,22 +87,22 @@ public class RegistrationTest extends BaseClass {
 		RP.getOtpChar6Field().sendKeys(Character.toString(OTP.charAt(5)));
 		
 		
-		Reporter.log("OTP Entered");
+		Reporter.log("OTP Entered",true);
 		wUtil.javaScriptExecutorClick(driver, RP.getSignupbtn());
-		Reporter.log("Clicked Singup Button");
+		Reporter.log("Clicked Singup Button",true);
 		
 		
 		if(wUtil.isElementVisible(driver, RP.getCalleyTamsActivationBtn()))
 		{
 			RP.getCalleyTamsActivationBtn().click();
-			Reporter.log("Selected Calley Teams");
+			Reporter.log("Selected Calley Teams",true);
 		}
 		
 
 		if(wUtil.isElementVisible(driver, RP.confirmCalleyTeamsActivationPopup()))
 		{
 			RP.confirmCalleyTeamsActivationPopup().click();
-			Reporter.log("Confirmed the selection of Calley Teams");
+			Reporter.log("Confirmed the selection of Calley Teams",true);
 			
 		}
 		
@@ -110,13 +110,13 @@ public class RegistrationTest extends BaseClass {
 		if (wUtil.isElementVisible(driver, RP.getGoToDashboardBtn()))
 		{
 			RP.getGoToDashboardBtn().click();
-			Reporter.log("Going to main dashboard");
+			Reporter.log("Going to main dashboard",true);
 			
 		}
 		
 		
 		String currentName = RP.getCurrentUserName().getText();
-		Reporter.log("Checking the currently logged in user");
+		Reporter.log("Checking if the account has been created for the user",true);
 		
 		//checking is the user is successfully registered
 		try {
@@ -125,7 +125,7 @@ public class RegistrationTest extends BaseClass {
 		catch(AssertionError e){
 			wUtil.getScreenshot(driver, "userRegistration");
 		}
-		
+		Reporter.log("Account Sucesfully Created",true);
 		
 	}
 	

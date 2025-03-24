@@ -25,7 +25,12 @@
     <version>2.15.1</version>  <!-- Use the latest version available -->
 </dependency>
 
-  
+  <dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+</dependency>
+
   </dependencies>
   
 

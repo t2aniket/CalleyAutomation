@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>TestNG:  Smoke</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Smoke</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Mar 25 01:20:22 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>123 seconds (123697 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.FullSetupTest.userLogin()'><b>userLogin</b><br>Test class: test.FullSetupTest<br/>
+<a href="#Output-247795540" onClick='toggleBox("Output-247795540", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-247795540" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-247795540">
+Trying to login with useremail and password<br/>
+User Logged In Sucess<br/>
+On to the Agents Page<br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>test.FullSetupTest@692f203f</td></tr>
+<tr>
+<td title='test.FullSetupTest.bulkUpload()'><b>bulkUpload</b><br>Test class: test.FullSetupTest<br/>
+<a href="#Output-1410186665" onClick='toggleBox("Output-1410186665", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1410186665" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1410186665">
+Inside the bulk Upload Page<br/>
+CSV File uploaded<br/>
+Confirm Button Clicked<br/>
+Mapping the data<br/>
+Data Sucessfully Mapped<br/>
+File Sucessfully Imported<br/>
+Test Passed<br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>test.FullSetupTest@692f203f</td></tr>
+<tr>
+<td title='test.RegistrationTest.userRegistration()'><b>userRegistration</b><br>Test class: test.RegistrationTest<br/>
+<a href="#Output-1087072654" onClick='toggleBox("Output-1087072654", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1087072654" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1087072654">
+On Registeration Page<br/>
+Entered Name,Email & Password<br/>
+Swiching to iFrame for google CAPTCHA<br/>
+Switched to IFrame<br/>
+Please solve the captcha manually since it is not disabled<br/>
+Waiting for Captcha to be solved<br/>
+Captcha solved switching back to main frame<br/>
+Entered MobileNumber<br/>
+Terms and Condition checkbox checked<br/>
+Clicked Signup Button<br/>
+OTP sent to mobile number enter it on eclipse since otp is dynamic and not turned off for testing purpose<br/>
+Please Enter OTP<br/>
+Entering the given OTP<br/>
+OTP Entered<br/>
+Clicked Singup Button<br/>
+Selected Calley Teams<br/>
+Confirmed the selection of Calley Teams<br/>
+Going to main dashboard<br/>
+Checking if the account has been created for the user<br/>
+Account Sucesfully Created<br/>
+</div>
+</td>
+<td></td>
+<td>46</td>
+<td>test.RegistrationTest@6302bbb1</td></tr>
+<tr>
+<td title='test.FullSetupTest.createAgent()'><b>createAgent</b><br>Test class: test.FullSetupTest<br>Parameters: Ani, aniagenttt@abcc.com, 8213652145, pa<br/>
+<a href="#Output-1877240674" onClick='toggleBox("Output-1877240674", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1877240674" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1877240674">
+Adding Agent Details<br/>
+Agent Details added sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>test.FullSetupTest@692f203f</td></tr>
+<tr>
+<td title='test.FullSetupTest.createAgent()'><b>createAgent</b><br>Test class: test.FullSetupTest<br>Parameters: Anand, anandagenttt@abcc.com, 8456324789, sa<br/>
+<a href="#Output-905488851" onClick='toggleBox("Output-905488851", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-905488851" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-905488851">
+Adding Agent Details<br/>
+Agent Details added sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>test.FullSetupTest@692f203f</td></tr>
+<tr>
+<td title='test.FullSetupTest.createAgent()'><b>createAgent</b><br>Test class: test.FullSetupTest<br>Parameters: Ankit, anikagenttt@abcc.com, 8745632598, da<br/>
+<a href="#Output-739703515" onClick='toggleBox("Output-739703515", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-739703515" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-739703515">
+Adding Agent Details<br/>
+Agent Details added sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>test.FullSetupTest@692f203f</td></tr>
+</table><p>
+</body>
+</html>

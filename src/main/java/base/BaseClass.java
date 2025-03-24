@@ -40,6 +40,7 @@ public class BaseClass {
 		String URL = pUtil.readPropertyFile("url");
 		
 		Reporter.log("Opening Browser");
+		try {
 		if (BROWSER.equalsIgnoreCase("chrome"))
 		{
 			driver = new ChromeDriver();
@@ -57,6 +58,14 @@ public class BaseClass {
 	
 		}
 		wUtil.maximizeWindow(driver);
+		
+		}
+		catch(Exception e)
+		{
+			Reporter.log(e.getMessage());
+		}
+		
+		
 		wUtil.waitForPageLoad(driver);
 		driver.get(URL);
 		Reporter.log("Visiting URL "+URL);		

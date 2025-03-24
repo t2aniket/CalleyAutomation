@@ -38,7 +38,7 @@ public class BulkUploadPage {
     private WebElement uploadbtn;
     
     
-    @FindBy(xpath="//button[@class='confirm']")
+    @FindBy(xpath="//div[@class='sa-confirm-button-container']/button")
     private WebElement confirmBtn;
     
     

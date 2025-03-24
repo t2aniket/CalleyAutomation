@@ -34,6 +34,12 @@ public class PropertyFileUtility {
      * @return
      */
     public String readPropertyFile(String key) {
+    	
+    	 if (pObj.getProperty(key) == null) {
+    		Reporter.log("Value not found for "+key);
+             
+         }
+   
         return pObj.getProperty(key);
     }
     

@@ -1,21 +1,242 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Starting Registration Test]]>
+    </line>
+    <line>
+      <![CDATA[Opening Browser]]>
+    </line>
+    <line>
+      <![CDATA[Visiting URL https://app.getcalley.com/registration.aspx]]>
+    </line>
+    <line>
+      <![CDATA[On Registeration Page]]>
+    </line>
+    <line>
+      <![CDATA[Entered Name,Email & Password]]>
+    </line>
+    <line>
+      <![CDATA[Swiching to iFrame for google CAPTCHA]]>
+    </line>
+    <line>
+      <![CDATA[Switched to IFrame]]>
+    </line>
+    <line>
+      <![CDATA[Please solve the captcha manually since it is not disabled]]>
+    </line>
+    <line>
+      <![CDATA[Waiting for Captcha to be solved]]>
+    </line>
+    <line>
+      <![CDATA[Captcha solved switching back to main frame]]>
+    </line>
+    <line>
+      <![CDATA[Entered MobileNumber]]>
+    </line>
+    <line>
+      <![CDATA[Terms and Condition checkbox checked]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Signup Button]]>
+    </line>
+    <line>
+      <![CDATA[OTP sent to mobile number enter it on eclipse since otp is dynamic and not turned off for testing purpose]]>
+    </line>
+    <line>
+      <![CDATA[Please Enter OTP]]>
+    </line>
+    <line>
+      <![CDATA[Entering the given OTP]]>
+    </line>
+    <line>
+      <![CDATA[OTP Entered]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Singup Button]]>
+    </line>
+    <line>
+      <![CDATA[Selected Calley Teams]]>
+    </line>
+    <line>
+      <![CDATA[Confirmed the selection of Calley Teams]]>
+    </line>
+    <line>
+      <![CDATA[Going to main dashboard]]>
+    </line>
+    <line>
+      <![CDATA[Checking if the account has been created for the user]]>
+    </line>
+    <line>
+      <![CDATA[Account Sucesfully Created]]>
+    </line>
+    <line>
+      <![CDATA[Opening Browser]]>
+    </line>
+    <line>
+      <![CDATA[Visiting URL https://app.getcalley.com/Login.aspx]]>
+    </line>
+    <line>
+      <![CDATA[Trying to login with useremail and password]]>
+    </line>
+    <line>
+      <![CDATA[User Logged In Sucess]]>
+    </line>
+    <line>
+      <![CDATA[On to the Agents Page]]>
+    </line>
+    <line>
+      <![CDATA[Adding Agent Details]]>
+    </line>
+    <line>
+      <![CDATA[Agent Details added sucessfully]]>
+    </line>
+    <line>
+      <![CDATA[Adding Agent Details]]>
+    </line>
+    <line>
+      <![CDATA[Agent Details added sucessfully]]>
+    </line>
+    <line>
+      <![CDATA[Adding Agent Details]]>
+    </line>
+    <line>
+      <![CDATA[Agent Details added sucessfully]]>
+    </line>
+    <line>
+      <![CDATA[Inside the bulk Upload Page]]>
+    </line>
+    <line>
+      <![CDATA[CSV File uploaded]]>
+    </line>
+    <line>
+      <![CDATA[Confirm Button Clicked]]>
+    </line>
+    <line>
+      <![CDATA[Mapping the data]]>
+    </line>
+    <line>
+      <![CDATA[Data Sucessfully Mapped]]>
+    </line>
+    <line>
+      <![CDATA[File Sucessfully Imported]]>
+    </line>
+    <line>
+      <![CDATA[Test Passed]]>
+    </line>
   </reporter-output>
-  <suite started-at="2025-03-24T18:15:17 IST" name="Default suite" finished-at="2025-03-24T18:16:43 IST" duration-ms="85833">
+  <suite started-at="2025-03-25T01:20:22 IST" name="MyTestSuite" finished-at="2025-03-25T01:22:25 IST" duration-ms="123697">
     <groups>
     </groups>
-    <test started-at="2025-03-24T18:15:17 IST" name="Default test" finished-at="2025-03-24T18:16:43 IST" duration-ms="85833">
-      <class name="test.FullSetupTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.FullSetupTest@49e53c76]" started-at="2025-03-24T18:15:17 IST" name="setup" finished-at="2025-03-24T18:15:23 IST" duration-ms="6030" status="PASS">
+    <test started-at="2025-03-25T01:20:22 IST" name="Smoke" finished-at="2025-03-25T01:22:25 IST" duration-ms="123697">
+      <class name="test.RegistrationTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.RegistrationTest@6302bbb1]" started-at="2025-03-25T01:20:22 IST" name="setup" finished-at="2025-03-25T01:20:30 IST" duration-ms="8661" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Starting Registration Test]]>
+            </line>
+            <line>
+              <![CDATA[Opening Browser]]>
+            </line>
+            <line>
+              <![CDATA[Visiting URL https://app.getcalley.com/registration.aspx]]>
+            </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="userLogin()[pri:1, instance:test.FullSetupTest@49e53c76]" started-at="2025-03-24T18:15:23 IST" name="userLogin" finished-at="2025-03-24T18:16:00 IST" duration-ms="36706" status="PASS">
+        <test-method signature="userRegistration()[pri:0, instance:test.RegistrationTest@6302bbb1]" started-at="2025-03-25T01:20:30 IST" name="userRegistration" finished-at="2025-03-25T01:21:17 IST" duration-ms="46442" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[On Registeration Page]]>
+            </line>
+            <line>
+              <![CDATA[Entered Name,Email & Password]]>
+            </line>
+            <line>
+              <![CDATA[Swiching to iFrame for google CAPTCHA]]>
+            </line>
+            <line>
+              <![CDATA[Switched to IFrame]]>
+            </line>
+            <line>
+              <![CDATA[Please solve the captcha manually since it is not disabled]]>
+            </line>
+            <line>
+              <![CDATA[Waiting for Captcha to be solved]]>
+            </line>
+            <line>
+              <![CDATA[Captcha solved switching back to main frame]]>
+            </line>
+            <line>
+              <![CDATA[Entered MobileNumber]]>
+            </line>
+            <line>
+              <![CDATA[Terms and Condition checkbox checked]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Signup Button]]>
+            </line>
+            <line>
+              <![CDATA[OTP sent to mobile number enter it on eclipse since otp is dynamic and not turned off for testing purpose]]>
+            </line>
+            <line>
+              <![CDATA[Please Enter OTP]]>
+            </line>
+            <line>
+              <![CDATA[Entering the given OTP]]>
+            </line>
+            <line>
+              <![CDATA[OTP Entered]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Singup Button]]>
+            </line>
+            <line>
+              <![CDATA[Selected Calley Teams]]>
+            </line>
+            <line>
+              <![CDATA[Confirmed the selection of Calley Teams]]>
+            </line>
+            <line>
+              <![CDATA[Going to main dashboard]]>
+            </line>
+            <line>
+              <![CDATA[Checking if the account has been created for the user]]>
+            </line>
+            <line>
+              <![CDATA[Account Sucesfully Created]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- userRegistration -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.RegistrationTest@6302bbb1]" started-at="2025-03-25T01:21:17 IST" name="close" finished-at="2025-03-25T01:21:17 IST" duration-ms="650" status="PASS">
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- test.RegistrationTest -->
+      <class name="test.FullSetupTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.FullSetupTest@692f203f]" started-at="2025-03-25T01:21:17 IST" name="setup" finished-at="2025-03-25T01:21:23 IST" duration-ms="5701" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Opening Browser]]>
+            </line>
+            <line>
+              <![CDATA[Visiting URL https://app.getcalley.com/Login.aspx]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="userLogin()[pri:1, instance:test.FullSetupTest@692f203f]" started-at="2025-03-25T01:21:23 IST" name="userLogin" finished-at="2025-03-25T01:21:39 IST" duration-ms="15972" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Trying to login with useremail and password]]>
+            </line>
+            <line>
+              <![CDATA[User Logged In Sucess]]>
+            </line>
+            <line>
+              <![CDATA[On to the Agents Page]]>
+            </line>
+          </reporter-output>
         </test-method> <!-- userLogin -->
-        <test-method signature="createAgent(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.FullSetupTest@49e53c76]" started-at="2025-03-24T18:16:00 IST" name="createAgent" data-provider="agentData" finished-at="2025-03-24T18:16:11 IST" duration-ms="11224" status="PASS">
+        <test-method signature="createAgent(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.FullSetupTest@692f203f]" started-at="2025-03-25T01:21:39 IST" name="createAgent" data-provider="agentData" finished-at="2025-03-25T01:21:50 IST" duration-ms="11074" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -24,7 +245,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[aaaa@abc.com]]>
+                <![CDATA[aniagenttt@abcc.com]]>
               </value>
             </param>
             <param index="2">
@@ -39,9 +260,15 @@
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[Adding Agent Details]]>
+            </line>
+            <line>
+              <![CDATA[Agent Details added sucessfully]]>
+            </line>
           </reporter-output>
         </test-method> <!-- createAgent -->
-        <test-method signature="createAgent(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.FullSetupTest@49e53c76]" started-at="2025-03-24T18:16:11 IST" name="createAgent" data-provider="agentData" finished-at="2025-03-24T18:16:20 IST" duration-ms="8562" status="PASS">
+        <test-method signature="createAgent(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.FullSetupTest@692f203f]" started-at="2025-03-25T01:21:50 IST" name="createAgent" data-provider="agentData" finished-at="2025-03-25T01:21:58 IST" duration-ms="8101" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -50,7 +277,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[anaa@abc.com]]>
+                <![CDATA[anandagenttt@abcc.com]]>
               </value>
             </param>
             <param index="2">
@@ -65,9 +292,15 @@
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[Adding Agent Details]]>
+            </line>
+            <line>
+              <![CDATA[Agent Details added sucessfully]]>
+            </line>
           </reporter-output>
         </test-method> <!-- createAgent -->
-        <test-method signature="createAgent(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.FullSetupTest@49e53c76]" started-at="2025-03-24T18:16:20 IST" name="createAgent" data-provider="agentData" finished-at="2025-03-24T18:16:29 IST" duration-ms="9369" status="PASS">
+        <test-method signature="createAgent(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.FullSetupTest@692f203f]" started-at="2025-03-25T01:21:58 IST" name="createAgent" data-provider="agentData" finished-at="2025-03-25T01:22:09 IST" duration-ms="10919" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -76,7 +309,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[aniaaaa@abc.com]]>
+                <![CDATA[anikagenttt@abcc.com]]>
               </value>
             </param>
             <param index="2">
@@ -91,17 +324,44 @@
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[Adding Agent Details]]>
+            </line>
+            <line>
+              <![CDATA[Agent Details added sucessfully]]>
+            </line>
           </reporter-output>
         </test-method> <!-- createAgent -->
-        <test-method signature="bulkUpload()[pri:3, instance:test.FullSetupTest@49e53c76]" started-at="2025-03-24T18:16:29 IST" name="bulkUpload" finished-at="2025-03-24T18:16:42 IST" depends-on-methods="test.FullSetupTest.createAgent" duration-ms="13357" status="PASS">
+        <test-method signature="bulkUpload()[pri:3, instance:test.FullSetupTest@692f203f]" started-at="2025-03-25T01:22:09 IST" name="bulkUpload" finished-at="2025-03-25T01:22:25 IST" depends-on-methods="test.FullSetupTest.createAgent" duration-ms="15630" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Inside the bulk Upload Page]]>
+            </line>
+            <line>
+              <![CDATA[CSV File uploaded]]>
+            </line>
+            <line>
+              <![CDATA[Confirm Button Clicked]]>
+            </line>
+            <line>
+              <![CDATA[Mapping the data]]>
+            </line>
+            <line>
+              <![CDATA[Data Sucessfully Mapped]]>
+            </line>
+            <line>
+              <![CDATA[File Sucessfully Imported]]>
+            </line>
+            <line>
+              <![CDATA[Test Passed]]>
+            </line>
           </reporter-output>
         </test-method> <!-- bulkUpload -->
-        <test-method is-config="true" signature="close()[pri:0, instance:test.FullSetupTest@49e53c76]" started-at="2025-03-24T18:16:42 IST" name="close" finished-at="2025-03-24T18:16:43 IST" duration-ms="475" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:test.FullSetupTest@692f203f]" started-at="2025-03-25T01:22:25 IST" name="close" finished-at="2025-03-25T01:22:25 IST" duration-ms="438" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- test.FullSetupTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Smoke -->
+  </suite> <!-- MyTestSuite -->
 </testng-results>
