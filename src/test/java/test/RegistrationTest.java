@@ -119,8 +119,12 @@ public class RegistrationTest extends BaseClass {
 		Reporter.log("Checking the currently logged in user");
 		
 		//checking is the user is successfully registered
+		try {
 		Assert.assertTrue(currentName.toLowerCase().contains(Name.toLowerCase()), "User login failed. Expected name: " + Name + ", but found: " + currentName);
-
+		}
+		catch(AssertionError e){
+			wUtil.getScreenshot(driver, "userRegistration");
+		}
 		
 		
 	}

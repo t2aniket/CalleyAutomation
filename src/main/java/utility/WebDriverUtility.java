@@ -1,9 +1,16 @@
 package utility;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.concurrent.TimeoutException;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -245,6 +252,19 @@ public class WebDriverUtility {
     	   
     	return false;
     	}
+    }
+    
+    public void getScreenshot(WebDriver driver, String fileName) {
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String screenshotPath = "screenshots/" + fileName + "_" + timestamp + ".png";
+        File destFile = new File(screenshotPath);
+        
+        try {
+            FileUtils.copyFile(src, destFile);
+        } catch (IOException e) {  // Specific exception type
+            e.printStackTrace();
+        }
     }
     
     

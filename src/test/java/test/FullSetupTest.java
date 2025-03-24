@@ -45,9 +45,15 @@ public class FullSetupTest extends BaseClass {
 
         // Verify login
         String currentName = HP.getCurrentUserName().getText();
+        try {
         Assert.assertTrue(currentName.toLowerCase().contains(username.toLowerCase()), "User login failed");
-        Reporter.log("User Logged In Sucess");
         
+        }
+        catch(Exception e){
+        	
+        	wUtil.getScreenshot(driver, "UserLogin_Failed");
+        }
+        Reporter.log("User Logged In Sucess");
         wUtil.moveToElement(driver, HP.getTeamBtn());
         HP.getAgentBtn().click();
     	Reporter.log("On to the Agents Page");
@@ -79,8 +85,13 @@ public class FullSetupTest extends BaseClass {
         	e.printStackTrace();
         }
         //verifying if agent is added or not
+        try {
         Assert.assertTrue(AP.isAgentAdded(agentName, agentEmail), "Agent Verification Failed");
-        Reporter.log("Agent Details added sucessfully");
+        }
+        catch(Exception e)
+        {
+        	wUtil.getScreenshot(driver, "AgentCreation_Failed_");
+        }Reporter.log("Agent Details added sucessfully");
     }
 
     @Test(priority = 3,dependsOnMethods = "createAgent")
